@@ -1,7 +1,7 @@
 const fullName = document.getElementById('name');
 const email = document.getElementById('email');
 const phoneNumber = document.getElementById('phone');
-const Country = document.getElementById('country');
+const countryName = document.getElementById('country');
 const message = document.getElementById('message');
 const submit = document.getElementsByClassName('form-submit')[0];
 
@@ -16,7 +16,7 @@ submit.addEventListener('submit', (e)=>{
     <b>Email: </b>${email.value}
     <b>Phone: </b>${phoneNumber.value}
     <b>Message: </b>${message.value}
-    <b>Country: </b>${Country.value}
+    <b>Country: </b>${countryName.value}
 
     `
     Email.send({
