@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contect Form</title>
     <link rel="stylesheet" href="app.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
-    
+
     <div class="container">
         
-        <form onsubmit="sendEmail(); reset(); return false;">
+        <form action="#" class="form-submit" reset(); return 'false';>
             <h1>Contact Form</h1>
             <input id="name" placeholder="Full Name" required>
             <input  id="email" placeholder="Email" required>
@@ -271,30 +272,9 @@
                 <option value="ZM">Zambia</option>
                 <option value="ZW">Zimbabwe</option>
             </select>
-            <button type="submit">Send</button>
+            <button type="click">Send</button>
         </form>
     </div>
-    
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "n0one4u2kill@gmail.com",
-                Password: "password",
-                To: 'anukulprime2@gmail.com',
-                From: document.getElementById("email").value,
-                Subject: "New Contact Form Enquiry",
-                Body: "Name: " + document.getElementById("name").value 
-                    + "<br> Email: " + document.getElementById("email").value +
-                    "<br> Phone: " + document.getElementById("phone").value +
-                    "<br> Message: " + document.getElementById("message").value +
-                    "<br> Country: " + document.getElementById("country").value
-            }).then(
-                message = alert("Message sent successfully")
-
-            );
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
